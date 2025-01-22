@@ -53,7 +53,6 @@ function Header() {
           </a>
           </Badge>
       </header>
-      Header
     </div>
   );
 }
