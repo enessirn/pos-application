@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Header from "../components/header/Header";
-import { Button, Card, Modal, Table } from "antd";
-import CreateBill from "../components/cart/CreateBill";
+import { Button, Card, Table } from "antd";
+import PrintBill from "../components/bills/PrintBill";
 
-function CartPage() {
+function BillPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => {
     setIsModalOpen(true);
@@ -45,6 +45,7 @@ function CartPage() {
     <React.Fragment>
       <Header />
       <div className="px-6">
+        <h1 className="text-4xl font-bol text-center mb-4">Faturalar</h1>
         <Table
           dataSource={dataSource}
           columns={columns}
@@ -54,32 +55,20 @@ function CartPage() {
         
         <div className="cart-total flex justify-end">
           <Card className="w-72 ">
-            <div className="flex justify-between">
-              <span>Ara Toplam</span>
-              <span>549.00₺</span>
-            </div>
-            <div className="flex justify-between my-2">
-              <span>KDV Toplam %8</span>
-              <span className="text-red-600">+49.00₺</span>
-            </div>
-            <div className="flex justify-between">
-              <b>Genel Toplam</b>
-              <b>599.00₺</b>
-            </div>
             <Button
               size="large"
               onClick={showModal}
               type="primary"
               className="w-full font-bold mt-2"
             >
-              Siparişi Oluştur
+              Yazdır
             </Button>
           </Card>
         </div>
       </div>
-      <CreateBill isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
+      <PrintBill isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
     </React.Fragment>
   );
 }
 
-export default CartPage;
+export default BillPage;
