@@ -38,7 +38,7 @@ function Header() {
             <UserOutlined className="md:text-2xl text-xl" />
             <span className="md:text-xs text-[10px]">Müşteriler</span>
           </Link>
-          <Link to="/"   className="menu-link flex flex-col items-center hover:text-[#40a9ff] transition-all">
+          <Link to="/statistic"   className="menu-link flex flex-col items-center hover:text-[#40a9ff] transition-all">
             <LineChartOutlined className="md:text-2xl text-xl" />
             <span className="md:text-xs text-[10px]">Istatikler</span>
           </Link>

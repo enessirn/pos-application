@@ -4,6 +4,7 @@ import CartPage from "./pages/CartPage.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import BillPage from "./pages/BillPage.jsx";
 import CustomerPage from "./pages/CustomerPage.jsx";
+import StatisticPage from "./pages/StatisticPage.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -12,6 +13,7 @@ function App() {
       <Route path="/cart" element={<CartPage />} />
       <Route path="/bills" element={<BillPage />} />
       <Route path="/customers" element={<CustomerPage />} />
+      <Route path="/statistic" element={<StatisticPage />} />
     </Routes>
       <React.Fragment>
       </React.Fragment>
